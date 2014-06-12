@@ -103,8 +103,10 @@ class Player(pg.sprite.Sprite):
 player = Player(blockers)
 
 
-"""Simple game loop that blits the map_surface onto
-the main_surface."""
+"""Simple game loop that updates the player sprite,
+blits the map_surface onto the main surface, and blits
+the player sprite onto the main surface.
+"""
 while True:
     keys = pg.key.get_pressed()
     player.update(keys)
