@@ -58,7 +58,7 @@ class Player(pg.sprite.Sprite):
         self.image = pg.Surface((22, 22))
         self.image.fill((130, 100, 200))
         self.rect = self.image.get_rect(x=100,
-                                        y=100)
+                                        y=300)
         self.x_vel = 0
         self.y_vel = 0
         self.blockers = blockers
