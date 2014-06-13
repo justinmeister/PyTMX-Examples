@@ -107,18 +107,21 @@ player = Player(blockers)
 blits the map_surface onto the main surface, and blits
 the player sprite onto the main surface.
 """
-while True:
-    keys = pg.key.get_pressed()
-    player.update(keys)
+def main():
+    while True:
+        keys = pg.key.get_pressed()
+        player.update(keys)
 
-    main_surface.blit(map_surface, map_rect)
-    player.draw(main_surface)
+        main_surface.blit(map_surface, map_rect)
+        player.draw(main_surface)
 
-    for event in pg.event.get():
-        if event.type == pg.QUIT:
-            pg.quit()
-            sys.exit()
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                pg.quit()
+                sys.exit()
 
-    pg.display.update()
-    fps_clock.tick(60)
+        pg.display.update()
+        fps_clock.tick(60)
 
+if __name__ == "__main__":
+    main()

@@ -25,14 +25,19 @@ map_rect = map_surface.get_rect()
 
 """Simple game loop that blits the map_surface onto
 the main_surface."""
-while True:
-    main_surface.blit(map_surface, map_rect)
+def main():
+    while True:
+        main_surface.blit(map_surface, map_rect)
 
-    for event in pg.event.get():
-        if event.type == pg.QUIT:
-            pg.quit()
-            sys.exit()
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                pg.quit()
+                sys.exit()
 
-    pg.display.update()
-    fps_clock.tick(30)
+        pg.display.update()
+        fps_clock.tick(30)
+
+
+if __name__ == "__main__":
+    main()
 
